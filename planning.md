@@ -84,3 +84,7 @@ Those are the main ones.
 ## Technical Requirements
 
 ### Main Server File
+
+* If no game is running, then initialize game.
+* The GET root method should, if no game is running, pass a code to the
+browser.
