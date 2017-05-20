@@ -22,3 +22,11 @@ give the user feedback about peg configurations, that sets up the pegs in the
 first place, etc. Then, more interesting pedagogically for me now, will be 
 the JavaScript magic. E.g., when someone clicks a peg, it should both change
 color *and* change a color attribute that will be submitted to the server.
+This shouldn't be too complicated since Mastermind isn't very complicated.
+
+As to a plan of attack, I think I'm going to do the page layout first. This
+will set up a sample board. Then I'll write the main app. Exactly how that
+will go work remains to be planned.
+
+## Layout and Design Plan
+
