@@ -85,6 +85,7 @@ Those are the main ones.
 
 ### Main Server File
 
-* If no game is running, then initialize game.
-* The GET root method should, if no game is running, pass a code to the
-browser.
+* &#10003; If no game is running, then initialize gamehash.
+* The GET root method should, if no game is running, pass a code to the view.
+Pretty sure that's all it needs to pass to the view.
+* Test a valid code is returned.
