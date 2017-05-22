@@ -73,19 +73,41 @@ in Sinatra session data. A POST 'new' method simply restarts the game.
 
 ### The Methods
 
-There are several methods needed:
-* new_game: initializes game
-* new_solution: creates solution
-* test_solution: given a solution and a guess, output results
+There are several basic game logic methods needed:
+* &#10003; Game.new: initializes game
+* &#10003; set_code: creates solution (initialized when Game is created)
+* &#10003; evaluate_guess: given a solution and a guess, output results
 
-Those are the main ones.
+### The CSS & JavaScript Logic
 
+#### Displaying Guesses
 
-## Technical Requirements
+Then there are the methods associated with preparing the look of the board,
+putting aside the purely visual surroundings.
 
-### Main Server File
+For each of the Game.guesses, I will want to display it in its own row. Note
+that the buttons must be small enough (or else resized) so that six across plus
+the black&whites (or, in the same space, a submit button) can fit on a portrait
+oriented phone.
 
-* &#10003; If no game is running, then initialize gamehash.
-* The GET root method should, if no game is running, pass a code to the view.
-Pretty sure that's all it needs to pass to the view.
-* Test a valid code is returned.
+The look of the pegs will be designed using CSS. In the right place, the guess
+color will be supplied. (E.g., gamehash.guesses[0][:guess][0] will represent a
+specific color.)
+
+The black & white evaluation pegs will be smaller, also designed using CSS, and
+put off to the side. Remember that you should make room for up to six (really
+five) of these evaluation pegs. These will be displayed with black first, then
+white. After that, a "hole" jpg will be shown.
+
+#### Input Pegs
+
+There are many possible ways to display the color options to the user using
+JavaScript or CSS. I could have something pop up on hover, but that sounds both
+difficult and potentially buggy. (There are probably libraries that do that,
+and I haven't learned any of them.) So instead I'll just click to cycle through
+colors. Clicking will call a JS function that will change the `name` and
+styling attributes of the peg in question (which will have an ID). Then, when
+the user submits the guess with a button, first, a comma-separated string will
+be prepared and inserted into params[:guess].
+
+### Winning

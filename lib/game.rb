@@ -23,12 +23,12 @@ class Game
     # Start at zero.
     @guesses[0][:black] = @guesses[0][:white] = 0
 
-    # After matching all blacks, there should be only white per miss.
-    # So, e.g., if someone guesses red red blue, he should get a white for
-    # only one of the reds.
+    # After matching all blacks, there should be only one white per miss.
+    # So, e.g., if the code is red green blue, and someone guesses red red blue,
+    # he should get a white for only one of the reds.
     potential_whites = []
     # You'll have to delete the matched colors from the copy so duplicate
-    # color guesses don't match the black one.
+    # color guesses don't match a correct guess.
     code_copy = self.code.dup             # Make a shallow copy of the solution.
     code_copy, potential_whites =
       evaluate_blacks(guess_array, code_copy, potential_whites)
@@ -36,12 +36,12 @@ class Game
   end
 
   def evaluate_blacks(guess_array, code_copy, potential_whites)
-    0.upto(guess_array.length - 1) do |i|
-      if @guesses[0][:guess][i] == self.code[i]
-        @guesses[0][:black] += 1
-        code_copy[i] = nil                # So this can't be matched again
-      else
-        potential_whites << i
+    0.upto(guess_array.length - 1) do |i| # Iterate thru guess indexes.
+      if @guesses[0][:guess][i] == self.code[i] # If exact match,
+        @guesses[0][:black] += 1          # increment black count, and
+        code_copy[i] = nil                # delete from copy so it can't be matched again.
+      else                                # Otherwise,
+        potential_whites << i             # add to array for check for white match.
       end
     end
     return code_copy, potential_whites
@@ -52,7 +52,7 @@ class Game
       color = @guesses[0][:guess][i]      # Get color of this guess.
       if code_copy.any? { |x| x == color }  # If the color matches any in copy,
         @guesses[0][:white] += 1          # then increment the whites, and
-        code_copy.delete(color)               # make color unavailable to match.
+        code_copy.delete(color)           # make color unavailable to match.
       end
     end
   end
