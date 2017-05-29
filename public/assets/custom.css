@@ -1,0 +1,107 @@
+#board {
+  display: inline-block;
+  height: 800px;
+  border: 2px #8d6e63 solid;
+  border-radius: 4px;
+  background-image: url("images/background_wood.jpg"); }
+
+div .pegrow {
+  margin: 2px;
+  background-color: inherit; }
+  div .pegrow .pegcell {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 1px;
+    border: 3px solid #8d6e63;
+    border-radius: 6px;
+    background-image: inherit; }
+    div .pegrow .pegcell .peg {
+      height: 30px;
+      width: 30px;
+      border: 2px grey solid;
+      border-radius: 50%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+    div .pegrow .pegcell .red {
+      background-color: red; }
+    div .pegrow .pegcell .blue {
+      background-color: blue; }
+    div .pegrow .pegcell .green {
+      background-color: green; }
+    div .pegrow .pegcell .yellow {
+      background-color: yellow; }
+    div .pegrow .pegcell .orange {
+      background-color: orange; }
+    div .pegrow .pegcell .purple {
+      background-color: purple; }
+    div .pegrow .pegcell .hole {
+      height: 15px;
+      width: 15px;
+      border: 0.5px grey solid;
+      border-radius: 50%;
+      background-color: black;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+  div .pegrow .resultbox {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 1px;
+    border: 3px solid #8d6e63;
+    border-radius: 6px;
+    background-image: inherit;
+    margin-left: 10px;
+    padding-top: 2px; }
+    div .pegrow .resultbox .resultrow {
+      padding-left: 2px; }
+      div .pegrow .resultbox .resultrow .resultcell {
+        height: 20px;
+        width: 20px;
+        float: left; }
+        div .pegrow .resultbox .resultrow .resultcell .result-black {
+          height: 12px;
+          width: 12px;
+          margin: 0 auto;
+          border: 3px black solid;
+          border-radius: 50%;
+          background-color: #333;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%); }
+        div .pegrow .resultbox .resultrow .resultcell .result-white {
+          height: 12px;
+          width: 12px;
+          margin: 0 auto;
+          border: 3px white solid;
+          border-radius: 50%;
+          background-color: #EEE;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%); }
+        div .pegrow .resultbox .resultrow .resultcell .result-hole {
+          height: 8px;
+          width: 8px;
+          margin: 0 auto;
+          border-radius: 50%;
+          background-color: black;
+          border: 0.5px grey solid;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%); }
+        div .pegrow .resultbox .resultrow .resultcell .red {
+          background-color: red; }
+        div .pegrow .resultbox .resultrow .resultcell .blue {
+          background-color: blue; }
+        div .pegrow .resultbox .resultrow .resultcell .green {
+          background-color: green; }
+        div .pegrow .resultbox .resultrow .resultcell .yellow {
+          background-color: yellow; }
+        div .pegrow .resultbox .resultrow .resultcell .orange {
+          background-color: orange; }
+        div .pegrow .resultbox .resultrow .resultcell .purple {
+          background-color: purple; }
+
+/*# sourceMappingURL=custom.css.map */

@@ -10,13 +10,13 @@ class GameTest < Minitest::Test
     assert_kind_of(Game, gamehash)
   end
 
-  # Does the gamehash have a codelength of 3?
+  # Does the gamehash have a codelength of 3? Sets a policy.
   def test_set_codelength
     gamehash = Game.new
     assert_equal(gamehash.codelength, 3)
   end
 
-  # Is gamehash's code 3 long?
+  # Is gamehash's code 3 long? Checks if actual code follows policy.
   def test_generate_code
     gamehash = Game.new
     assert_equal(gamehash.code.length, 3)

@@ -71,7 +71,7 @@ number of white. The POST 'move' method puts into the params hash the player's
 most recent guess. An array of older guesses (and results) should be available
 in Sinatra session data. A POST 'new' method simply restarts the game.
 
-### The Methods
+#### Server-side Methods
 
 There are several basic game logic methods needed:
 * &#10003; Game.new: initializes game
@@ -79,6 +79,16 @@ There are several basic game logic methods needed:
 * &#10003; evaluate_guess: given a solution and a guess, output results
 
 ### The CSS & JavaScript Logic
+
+#### Layout Tasks
+
+The layout will have the following tasks:
+
+* &#10003; Create header, footer, and main section.
+* &#10003; Use Pencil to sketch the board.
+* &#10003; Create a static design of the board HTML/CSS/Bootstrap.
+* PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
+* Check your resources that all needed HTML tags etc. are there; validate.
 
 #### Displaying Guesses
 

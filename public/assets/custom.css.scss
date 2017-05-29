@@ -1,0 +1,131 @@
+$border: #8d6e63;
+
+// This renders any div vertically centered.
+@mixin center-div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin peg-colors {
+  .red {
+    background-color: red;
+  }
+
+  .blue {
+    background-color: blue;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .orange {
+    background-color: orange;
+  }
+
+  .purple {
+    background-color: purple;
+  }
+}
+
+@mixin inner-box {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 1px;
+  border: 3px solid $border;
+  border-radius: 6px;
+  background-image: inherit;
+}
+
+// The enclosing board
+#board {
+  display: inline-block;
+  height: 800px;
+  border: 2px $border solid;
+  border-radius: 4px;
+  background-image: url("images/background_wood.jpg");
+}
+
+div {
+  .pegrow {
+    margin: 2px;
+    background-color: inherit;
+
+    .pegcell {
+      @include inner-box;
+
+      .peg {
+        height: 30px;
+        width: 30px;
+        border: 2px grey solid;
+        border-radius: 50%;
+        @include center-div;
+      }
+
+      @include peg-colors;
+
+      .hole {
+        height: 15px;
+        width: 15px;
+        border: 0.5px grey solid;
+        border-radius: 50%;
+        background-color: black;
+        @include center-div;
+      }
+    }
+
+    .resultbox {
+      @include inner-box;
+      margin-left: 10px;
+      padding-top: 2px;
+
+      .resultrow {
+        padding-left: 2px;
+
+        .resultcell {
+          height: 20px;
+          width: 20px;
+          float: left;
+
+          .result-black {
+            height: 12px;
+            width: 12px;
+            margin: 0 auto;
+            border: 3px black solid;
+            border-radius: 50%;
+            background-color: #333;
+            @include center-div;
+          }
+
+          .result-white {
+            height: 12px;
+            width: 12px;
+            margin: 0 auto;
+            border: 3px white solid;
+            border-radius: 50%;
+            background-color: #EEE;
+            @include center-div;
+          }
+
+          .result-hole {
+            height: 8px;
+            width: 8px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background-color: black;
+            border: 0.5px grey solid;
+            @include center-div;
+          }
+
+          @include peg-colors;
+        }
+      }
+    }
+  }
+}

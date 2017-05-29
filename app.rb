@@ -11,7 +11,7 @@ enable :sessions
 
 get('/') do
   @gamehash ||= Game.new  # if necessary, initialize empty game data hash
-  "code = #{@gamehash.code}"
+  erb :main
 end
 
 post('/guess') do
