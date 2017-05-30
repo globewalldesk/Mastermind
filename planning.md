@@ -84,11 +84,11 @@ There are several basic game logic methods needed:
 
 The layout will have the following tasks:
 
-* &#10003; Create header, footer, and main section.
-* &#10003; Use Pencil to sketch the board.
-* &#10003; Create a static design of the board HTML/CSS/Bootstrap.
-* PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
-* Check your resources that all needed HTML tags etc. are there; validate.
+* [x] Create header, footer, and main section.
+* [x] Use Pencil to sketch the board.
+* [x] Create a static design of the board HTML/CSS/Bootstrap.
+* [] PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
+* [] Check your resources that all needed HTML tags etc. are there; validate.
 
 #### Input Pegs
 
@@ -101,7 +101,7 @@ styling attributes of the peg in question (which will have an ID). Then, when
 the user submits the guess with a button, first, a comma-separated string will
 be prepared and inserted into params[:guess].
 
-&#10003; The above is done.
+[x] The above is done.
 
 #### Displaying Old Guesses
 
@@ -119,12 +119,11 @@ put off to the side. Remember that you should make room for up to six (really
 five) of these evaluation pegs. These will be displayed with black first, then
 white. After that, a "hole" jpg will be shown.
 
-* Each old guess is displayed on its own row.
-* Make sure the logic does not depend on precisely three pegs, but gets this
+* [] Each old guess is displayed on its own row.
+** [] Iterate
+* [] Make sure the logic does not depend on precisely three pegs, but gets this
   from gamehash.codelength. But, note, it's OK if the design doesn't support
   more than three guesses yet.
-*
-
-
+* 
 
 ### Winning
