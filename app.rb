@@ -19,7 +19,6 @@ end
 
 post('/guess') do
   gamehash.evaluate_guess(prepare_guess_array(params))
-  p "White:", gamehash.guesses[0][:white].inspect
-  p "Black:", gamehash.guesses[0][:black].inspect
+  p gamehash.inspect
   redirect '/'
 end

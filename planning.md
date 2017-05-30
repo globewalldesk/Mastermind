@@ -90,10 +90,20 @@ The layout will have the following tasks:
 * PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
 * Check your resources that all needed HTML tags etc. are there; validate.
 
-#### Displaying Guesses
+#### Input Pegs
 
-Then there are the methods associated with preparing the look of the board,
-putting aside the purely visual surroundings.
+There are many possible ways to display the color options to the user using
+JavaScript or CSS. I could have something pop up on hover, but that sounds both
+difficult and potentially buggy. (There are probably libraries that do that,
+and I haven't learned any of them.) So instead I'll just click to cycle through
+colors. Clicking will call a JS function that will change the `name` and
+styling attributes of the peg in question (which will have an ID). Then, when
+the user submits the guess with a button, first, a comma-separated string will
+be prepared and inserted into params[:guess].
+
+&#10003; The above is done.
+
+#### Displaying Old Guesses
 
 For each of the Game.guesses, I will want to display it in its own row. Note
 that the buttons must be small enough (or else resized) so that six across plus
@@ -109,15 +119,12 @@ put off to the side. Remember that you should make room for up to six (really
 five) of these evaluation pegs. These will be displayed with black first, then
 white. After that, a "hole" jpg will be shown.
 
-#### Input Pegs
+* Each old guess is displayed on its own row.
+* Make sure the logic does not depend on precisely three pegs, but gets this
+  from gamehash.codelength. But, note, it's OK if the design doesn't support
+  more than three guesses yet.
+*
 
-There are many possible ways to display the color options to the user using
-JavaScript or CSS. I could have something pop up on hover, but that sounds both
-difficult and potentially buggy. (There are probably libraries that do that,
-and I haven't learned any of them.) So instead I'll just click to cycle through
-colors. Clicking will call a JS function that will change the `name` and
-styling attributes of the peg in question (which will have an ID). Then, when
-the user submits the guess with a button, first, a comma-separated string will
-be prepared and inserted into params[:guess].
+
 
 ### Winning
