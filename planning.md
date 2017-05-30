@@ -74,9 +74,9 @@ in Sinatra session data. A POST 'new' method simply restarts the game.
 #### Server-side Methods
 
 There are several basic game logic methods needed:
-* &#10003; Game.new: initializes game
-* &#10003; set_code: creates solution (initialized when Game is created)
-* &#10003; evaluate_guess: given a solution and a guess, output results
+- [x] Game.new: initializes game
+- [x] set_code: creates solution (initialized when Game is created)
+- [x] evaluate_guess: given a solution and a guess, output results
 
 ### The CSS & JavaScript Logic
 
@@ -84,11 +84,11 @@ There are several basic game logic methods needed:
 
 The layout will have the following tasks:
 
-* [x] Create header, footer, and main section.
-* [x] Use Pencil to sketch the board.
-* [x] Create a static design of the board HTML/CSS/Bootstrap.
-* [] PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
-* [] Check your resources that all needed HTML tags etc. are there; validate.
+- [x] Create header, footer, and main section.
+- [x] Use Pencil to sketch the board.
+- [x] Create a static design of the board HTML/CSS/Bootstrap.
+- [] PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
+- [] Check your resources that all needed HTML tags etc. are there; validate.
 
 #### Input Pegs
 
@@ -119,11 +119,11 @@ put off to the side. Remember that you should make room for up to six (really
 five) of these evaluation pegs. These will be displayed with black first, then
 white. After that, a "hole" jpg will be shown.
 
-* [] Each old guess is displayed on its own row.
-** [] Iterate
-* [] Make sure the logic does not depend on precisely three pegs, but gets this
+- [x] Each old guess is displayed on its own row.
+  - [] Iterate
+- [] Make sure the logic does not depend on precisely three pegs, but gets this
   from gamehash.codelength. But, note, it's OK if the design doesn't support
   more than three guesses yet.
-* 
+- 
 
 ### Winning
