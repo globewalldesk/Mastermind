@@ -5,7 +5,7 @@ class Game
   attr_accessor :codelength, :colors, :code, :guesses
 
   def initialize
-    @codelength = 3 # placeholder; later versions will be able to set this
+    @codelength = 4 # placeholder; later versions will be able to set this
     @colors = COLORS[0,codelength * 2]
     @code = set_code(@codelength)
     @guesses = []
@@ -34,6 +34,7 @@ class Game
     code_copy, potential_whites =
       evaluate_blacks(guess_array, code_copy, potential_whites)
     evaluate_whites(code_copy, potential_whites)
+    resultword
   end
 
   def evaluate_blacks(guess_array, code_copy, potential_whites)
@@ -56,6 +57,15 @@ class Game
         code_copy.delete(color)           # make color unavailable to match.
       end
     end
+  end
+
+  # Converts a quantity of blacks and whites into an array of "black" and
+  # "white" strings; to be displayed on the board.
+  def resultword
+    resultwords = []
+    @guesses[0][:black].times {|i| resultwords << "black"}
+    @guesses[0][:white].times {|i| resultwords << "white"}
+    @guesses[0][:resultwords] = resultwords
   end
 
 end

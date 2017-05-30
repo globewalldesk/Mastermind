@@ -1,58 +1,10 @@
 <%= erb :header %>
-
       <div id="board">
         <div class="row pegrow guessrow">
-          <%= erb :render_guessrow %>
+          <%= erb :guessrow %>
         </div>
+        <%= erb :oldrows %>
       </div>
-
 <br>
-
-      <div id="board">
-        <div class="row pegrow">
-          <div class="pegcell">
-            <div class="peg center-block red"></div>
-          </div>
-          <div class="pegcell">
-            <div class="peg center-block orange"></div>
-          </div>
-          <div class="pegcell">
-            <div class="peg center-block yellow"></div>
-          </div>
-          <div class="resultbox">
-            <div class="resultrow">
-              <div class="resultcell">
-                <div class="result-black"></div>
-              </div>
-              <div class="resultcell">
-                <div class="result-black"></div>
-              </div>
-            </div>
-            <div class="resultrow">
-              <div class="resultcell">
-                <div class="result-white"></div>
-              </div>
-              <div class="resultcell">
-                <div class="result-white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row pegrow">
-          <div class="pegcell">
-            <div class="peg center-block green"></div>
-          </div>
-          <div class="pegcell">
-            <div class="peg center-block blue"></div>
-          </div>
-          <div class="pegcell">
-            <div class="hole center-block"></div>
-          </div>
-        </div>
-
-      </div>
-
       Remember to include < output > around your output!
-
 <%= erb :footer %>
