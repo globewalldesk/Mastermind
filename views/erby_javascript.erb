@@ -1,0 +1,35 @@
+<script>
+  var colors = <%= @gamehash.colors %>;
+  var pegCellColors = []; // Will be an array of the current peg cell colors.
+  function nextColor(i) {
+    // Get index number of this peg's current cell color.
+    var colorNum = pegCellColors[i];
+    // Get next color (in a word, not a number) after that.
+    var nextColorWord = getNextColor(colorNum, i);
+    // Set pegcell class to next color.
+    var thisCell = document.getElementById("peg" + i);
+    var hiddenInput = document.getElementById("pegSubmit" + i);
+    if (nextColorWord != "hole") {
+      thisCell.className = "peg center-block " + nextColorWord;
+      hiddenInput.setAttribute("value", nextColorWord);
+    } else {
+      thisCell.className = "hole center-block";
+      hiddenInput.setAttribute("value", "hole");
+    }
+  }
+
+  // This not only returns the color word, it sets the next number.
+  function getNextColor(colorNum, i) {
+    if (colorNum == undefined) {
+      pegCellColors[i] = 0;
+      return colors[0];
+    } else if (colorNum < (colors.length - 1)) {
+      pegCellColors[i] = colorNum + 1;
+      return colors[colorNum + 1];
+    } else {
+      pegCellColors[i] = undefined;
+      return "hole";
+    }
+  }
+
+</script>

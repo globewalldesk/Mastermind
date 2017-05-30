@@ -1,6 +1,14 @@
 <%= erb :header %>
 
       <div id="board">
+        <div class="row pegrow guessrow">
+          <%= erb :render_guessrow %>
+        </div>
+      </div>
+
+<br>
+
+      <div id="board">
         <div class="row pegrow">
           <div class="pegcell">
             <div class="peg center-block red"></div>
@@ -17,12 +25,15 @@
                 <div class="result-black"></div>
               </div>
               <div class="resultcell">
-                <div class="result-white"></div>
+                <div class="result-black"></div>
               </div>
             </div>
             <div class="resultrow">
               <div class="resultcell">
-                <div class="result-hole"></div>
+                <div class="result-white"></div>
+              </div>
+              <div class="resultcell">
+                <div class="result-white"></div>
               </div>
             </div>
           </div>

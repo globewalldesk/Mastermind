@@ -1,17 +1,18 @@
 class Game
 
-  COLORS = %w( red pink yellow green blue purple )
+  COLORS = %w( red orange yellow green blue purple )
 
-  attr_accessor :codelength, :code, :guesses
+  attr_accessor :codelength, :colors, :code, :guesses
 
   def initialize
     @codelength = 3 # placeholder; later versions will be able to set this
+    @colors = COLORS[0,codelength * 2]
     @code = set_code(@codelength)
     @guesses = []
   end
 
   def set_code(codelength)
-    return COLORS.shuffle[0,codelength]
+    return @colors.shuffle[0,codelength]
   end
 
   def evaluate_guess(guess_array)
