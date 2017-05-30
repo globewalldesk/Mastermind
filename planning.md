@@ -119,7 +119,7 @@ put off to the side. Remember that you should make room for up to six (really
 five) of these evaluation pegs. These will be displayed with black first, then
 white. After that, a "hole" jpg will be shown.
 
-- [x] Each old guess is displayed on its own row.
+- [ ] Each old guess is displayed on its own row.
   - [ ] Iterate each guess.
   - [ ] Iterate each old peg.
   - [ ] Iterate result pegs.
