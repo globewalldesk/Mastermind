@@ -87,8 +87,8 @@ The layout will have the following tasks:
 - [x] Create header, footer, and main section.
 - [x] Use Pencil to sketch the board.
 - [x] Create a static design of the board HTML/CSS/Bootstrap.
-- [] PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
-- [] Check your resources that all needed HTML tags etc. are there; validate.
+- [ ] PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
+- [ ] Check your resources that all needed HTML tags etc. are there; validate.
 
 #### Input Pegs
 
@@ -120,8 +120,10 @@ five) of these evaluation pegs. These will be displayed with black first, then
 white. After that, a "hole" jpg will be shown.
 
 - [x] Each old guess is displayed on its own row.
-  - [] Iterate
-- [] Make sure the logic does not depend on precisely three pegs, but gets this
+  - [ ] Iterate each guess.
+  - [ ] Iterate each old peg.
+  - [ ] Iterate result pegs.
+- [ ] Make sure the logic does not depend on precisely three pegs, but gets this
   from gamehash.codelength. But, note, it's OK if the design doesn't support
   more than three guesses yet.
 - 
