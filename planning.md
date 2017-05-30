@@ -87,8 +87,6 @@ The layout will have the following tasks:
 - [x] Create header, footer, and main section.
 - [x] Use Pencil to sketch the board.
 - [x] Create a static design of the board HTML/CSS/Bootstrap.
-- [ ] PROGRESS: Study Bootstrap so you can make sure the main board looks good on phones.
-- [ ] Check your resources that all needed HTML tags etc. are there; validate.
 
 #### Input Pegs
 
@@ -101,7 +99,7 @@ styling attributes of the peg in question (which will have an ID). Then, when
 the user submits the guess with a button, first, a comma-separated string will
 be prepared and inserted into params[:guess].
 
-[x] The above is done.
+- [x] The above is done.
 
 #### Displaying Old Guesses
 
@@ -119,13 +117,35 @@ put off to the side. Remember that you should make room for up to six (really
 five) of these evaluation pegs. These will be displayed with black first, then
 white. After that, a "hole" jpg will be shown.
 
-- [ ] Each old guess is displayed on its own row.
-  - [ ] Iterate each guess.
-  - [ ] Iterate each old peg.
-  - [ ] Iterate result pegs.
-- [ ] Make sure the logic does not depend on precisely three pegs, but gets this
-  from gamehash.codelength. But, note, it's OK if the design doesn't support
-  more than three guesses yet.
-- 
+- [x] Each old guess is displayed on its own row.
+  - [x] Iterate each guess.
+  - [x] Iterate each old peg.
+  - [x] Iterate result pegs.
+- [x] Make sure the logic does not depend on precisely three pegs, but gets this
+  from gamehash.codelength.
 
-### Winning
+### Winning and Losing
+
+Winning actually will require showing the covered up, then uncovered. This
+requires a new design for the covered-up solution. In addition, there will have
+to be some snazzy way to tell the user that he's won, and to invite a new game
+(and to ensure that the user can't continue guessing after winning). Finally,
+the user will have to be able to lose!
+
+### Final Improvements
+- [ ] Show link-style hand when hovering an active peg.
+- [ ] Different users use different sessions.
+- [ ] Add integration tests!
+- [ ] Show (always in the same place) color choices when the user hovers an
+      active peg.
+- [ ] Add two new colors for four-peg game.
+- [ ] Add empty holes to the results board.
+- [ ] Restrict number of turns; put turn numbers next to each.
+- [ ] Add a collapsible instruction bubble. Save collapsed state in session as
+      necessary.
+- [ ] Enable the user to choose between 3 and 4 rows, and to start a new game.
+- [ ] Move name, copyright, etc., to <footer> as practice for that.
+- [ ] Add column info for Bootstrap.
+- [ ] Check your resources that all needed HTML tags etc. are there; validate.
+- [ ] Add everything you've learned to SuperMemo.
+- [ ] Refactor everything.
