@@ -9,21 +9,19 @@ include Helper # TRY REMOVING THIS AND SEE IF IT STILL WORKS
 
 enable :sessions
 
-gamehash = Game.new
-
 get('/') do
-  gamehash ||= Game.new  # if necessary, initialize empty game data hash
-  @gamehash = gamehash
+  session[:gamehash] ||= Game.new  # if necessary, initialize empty game data hash
+  @gamehash = session[:gamehash]
   erb :main
 end
 
 post('/guess') do
-  gamehash.evaluate_guess(prepare_guess_array(params))
+  session[:gamehash].evaluate_guess(prepare_guess_array(params))
   redirect '/'
 end
 
 post('/new') do
-  gamehash = Game.new
+  session[:gamehash] = Game.new
   @won = false
   redirect '/'
 end
