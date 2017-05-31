@@ -146,6 +146,7 @@ the user will have to be able to lose!
       necessary.
 - [ ] Different users use different sessions.
 - [ ] Add integration tests!
+- [ ] Make design responsive (work on my phone)
 - [ ] Add two new colors for four-peg game.
 - [ ] Add empty holes to the results board.
 - [ ] Restrict number of turns; put turn numbers next to each.
