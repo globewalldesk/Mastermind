@@ -19,6 +19,11 @@ end
 
 post('/guess') do
   gamehash.evaluate_guess(prepare_guess_array(params))
-  p gamehash.inspect
+  redirect '/'
+end
+
+post('/new') do
+  gamehash = Game.new
+  @won = false
   redirect '/'
 end

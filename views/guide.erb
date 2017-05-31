@@ -1,0 +1,9 @@
+<div class="board" id="guide" >
+  <div class="row pegrow">
+    <% @gamehash.colors.each_with_index do |color, i| %>
+      <div class="pegcell">
+        <div id="guidecell-<%= color %>" class="peg center-block <%= color %>"></div>
+      </div>
+    <% end %>
+  </div>
+</div>

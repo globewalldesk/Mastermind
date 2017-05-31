@@ -43,18 +43,35 @@ $border: #8d6e63;
   background-image: inherit;
 }
 
+div#guide {
+  position: relative; // Should be positionable relative to ordinary pos.
+  display: none; // Isn't shown until showGuide() shows it.
+  float: left;
+  background-image: url("images/background_wood.jpg");
+  top: -45px;
+}
+
+#instructions {
+  max-width: 500px;
+}
+
 // The enclosing board
-#board {
-  display: inline-block;
+.board {
+  display: block;
   border: 2px $border solid;
   border-radius: 4px;
   background-image: url("images/background_wood.jpg");
+  position: absolute;
 }
 
 div {
   .pegrow {
     margin: 2px;
     background-color: inherit;
+
+    .active-cell {
+      cursor: pointer;
+    }
 
     .pegcell {
       @include inner-box;
@@ -65,6 +82,10 @@ div {
         border: 2px grey solid;
         border-radius: 50%;
         @include center-div;
+      }
+
+      .guide-highlight {
+        border: 3px white solid;
       }
 
       @include peg-colors;

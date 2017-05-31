@@ -1,12 +1,25 @@
-#board {
-  display: inline-block;
+div#guide {
+  position: relative;
+  display: none;
+  float: left;
+  background-image: url("images/background_wood.jpg");
+  top: -45px; }
+
+#instructions {
+  max-width: 500px; }
+
+.board {
+  display: block;
   border: 2px #8d6e63 solid;
   border-radius: 4px;
-  background-image: url("images/background_wood.jpg"); }
+  background-image: url("images/background_wood.jpg");
+  position: absolute; }
 
 div .pegrow {
   margin: 2px;
   background-color: inherit; }
+  div .pegrow .active-cell {
+    cursor: pointer; }
   div .pegrow .pegcell {
     height: 50px;
     width: 50px;
@@ -23,6 +36,8 @@ div .pegrow {
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
+    div .pegrow .pegcell .guide-highlight {
+      border: 3px white solid; }
     div .pegrow .pegcell .red {
       background-color: red; }
     div .pegrow .pegcell .blue {

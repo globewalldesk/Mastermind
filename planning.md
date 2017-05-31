@@ -133,16 +133,16 @@ to be some snazzy way to tell the user that he's won, and to invite a new game
 the user will have to be able to lose!
 
 ### Final Improvements
-- [ ] Show link-style hand when hovering an active peg.
+- [x] Show link-style hand when hovering an active peg.
+- [x] Show (always in the same place) color choices when the user hovers an
+      active peg.
+- [x] Add a collapsible instruction bubble. Save collapsed state in session as
+      necessary.
 - [ ] Different users use different sessions.
 - [ ] Add integration tests!
-- [ ] Show (always in the same place) color choices when the user hovers an
-      active peg.
 - [ ] Add two new colors for four-peg game.
 - [ ] Add empty holes to the results board.
 - [ ] Restrict number of turns; put turn numbers next to each.
-- [ ] Add a collapsible instruction bubble. Save collapsed state in session as
-      necessary.
 - [ ] Enable the user to choose between 3 and 4 rows, and to start a new game.
 - [ ] Move name, copyright, etc., to <footer> as practice for that.
 - [ ] Add column info for Bootstrap.

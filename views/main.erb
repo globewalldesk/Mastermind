@@ -1,10 +1,24 @@
 <%= erb :header %>
-      <div id="board">
+      <% if (@gamehash.guesses[0] && (@gamehash.code == @gamehash.guesses[0][:guess])) %>
+        <p>You won!</p>
+        <% @won = true %>
+        <form method="post" action="/new">
+          <button type="submit" class="btn btn-success">New Game?</button>
+        </form>
+      <% elsif @gamehash.instructions %>
+        <p class="well" id="instructions">Guess the <%= @gamehash.codelength %>-long code! Click the holes to
+           change peg colors. Click the checkmark to submit a guess. Each small
+           black peg you get back means you guessed the right color in the right
+           position. Each white means you guessed the right color, but the
+           wrong position. <a onclick="closeInstructions();">Dismiss</a></p>
+      <% end %>
+      <%= erb :guide %><br>
+      <div class="board">
         <div class="row pegrow guessrow">
-          <%= erb :guessrow %>
+          <% unless @won %>
+            <%= erb :guessrow %>
+          <% end %>
         </div>
         <%= erb :oldrows %>
       </div>
-<br>
-      Remember to include < output > around your output!
 <%= erb :footer %>

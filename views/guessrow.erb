@@ -1,7 +1,7 @@
 <form method="post" action="/guess">
-  <% colors = ['red', 'blue', 'green'] %>
   <% for i in 0..(@gamehash.codelength - 1) %>
-    <div class="pegcell" onclick="nextColor(<%= i %>)">
+    <div class="pegcell active-cell" onclick="nextColor(<%= i %>)"
+      onmouseover="showGuide()" onmouseout="hideGuide()">
       <div id="peg<%= i %>" class="hole center-block">
         <input type="hidden" id="pegSubmit<%= i %>" name="peg<%= i %>" value="">
       </div>

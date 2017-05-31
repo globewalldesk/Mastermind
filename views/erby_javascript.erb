@@ -2,6 +2,8 @@
   var colors = <%= @gamehash.colors %>;
   var pegCellColors = []; // Will be an array of the current peg cell colors.
   function nextColor(i) {
+    // Remove all highlighting from guide pegs.
+    removeAllHighlighting();
     // Get index number of this peg's current cell color.
     var colorNum = pegCellColors[i];
     // Get next color (in a word, not a number) after that.
@@ -9,12 +11,17 @@
     // Set pegcell class to next color.
     var thisCell = document.getElementById("peg" + i);
     var hiddenInput = document.getElementById("pegSubmit" + i);
+    var lastGuideCell = document.getElementById("guidecell-" + colors[(colorNum || 0)]);
+    var guideCell = document.getElementById("guidecell-" + nextColorWord);
     if (nextColorWord != "hole") {
       thisCell.className = "peg center-block " + nextColorWord;
       hiddenInput.setAttribute("value", nextColorWord);
+      lastGuideCell.classList.remove("guide-highlight");
+      guideCell.classList.add("guide-highlight");
     } else {
       thisCell.className = "hole center-block";
       hiddenInput.setAttribute("value", "hole");
+      document.getElementById("guidecell-" + colors.slice(-1) ).classList.remove("guide-highlight");
     }
   }
 
@@ -30,6 +37,34 @@
       pegCellColors[i] = undefined;
       return "hole";
     }
+  }
+
+  // This simply displays the #guide div, a popup that is used to help the user
+  // choose a color.
+  function showGuide() {
+    var guide = document.getElementById("guide");
+    guide.style.display = "inline-block";
+  }
+
+  // This hides the #guide div.
+  function hideGuide() {
+    var guide = document.getElementById("guide");
+    guide.style.display = "none";
+    // NEED TO DELETE ALL OLD HIGHLIGHTS ON MOUSEOFF
+    removeAllHighlighting()
+  }
+
+  function removeAllHighlighting() {
+    var colors = <%= @gamehash.colors %>;
+    for (var color of colors) {
+      var guideCell = document.getElementById("guidecell-" + color);
+      guideCell.classList.remove("guide-highlight");
+    }
+  }
+
+  function closeInstructions() {
+    document.getElementById("instructions").style.display = "none";
+    <%= @gamehash.instructions = false %>;
   }
 
 </script>
