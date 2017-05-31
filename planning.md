@@ -132,6 +132,12 @@ to be some snazzy way to tell the user that he's won, and to invite a new game
 (and to ensure that the user can't continue guessing after winning). Finally,
 the user will have to be able to lose!
 
+- [x] Announce winner.
+- [x] More attractively.
+- [x] Disallow user from continuing to guess after winning.
+- [ ] Show "covered up solution."
+- [ ] Allow user to lose.
+
 ### Final Improvements
 - [x] Show link-style hand when hovering an active peg.
 - [x] Show (always in the same place) color choices when the user hovers an

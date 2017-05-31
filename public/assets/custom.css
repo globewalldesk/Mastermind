@@ -1,3 +1,13 @@
+div.won {
+  font-size: 3em;
+  color: green;
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: lightyellow;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center; }
+
 div#guide {
   position: relative;
   display: none;
@@ -50,6 +60,10 @@ div .pegrow {
       background-color: orange; }
     div .pegrow .pegcell .purple {
       background-color: purple; }
+    div .pegrow .pegcell .pink {
+      background-color: magenta; }
+    div .pegrow .pegcell .lightblue {
+      background-color: aqua; }
     div .pegrow .pegcell .hole {
       height: 15px;
       width: 15px;
@@ -117,6 +131,10 @@ div .pegrow {
           background-color: orange; }
         div .pegrow .resultbox .resultrow .resultcell .purple {
           background-color: purple; }
+        div .pegrow .resultbox .resultrow .resultcell .pink {
+          background-color: magenta; }
+        div .pegrow .resultbox .resultrow .resultcell .lightblue {
+          background-color: aqua; }
     div .pegrow .resultbox .icon-button {
       width: 100%;
       height: 100%;

@@ -1,6 +1,6 @@
 class Game
 
-  COLORS = %w( red orange yellow green blue purple )
+  COLORS = %w( red orange yellow green blue purple pink lightblue )
 
   attr_accessor :codelength, :colors, :code, :guesses, :instructions
 

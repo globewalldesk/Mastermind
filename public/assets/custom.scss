@@ -31,6 +31,14 @@ $border: #8d6e63;
   .purple {
     background-color: purple;
   }
+
+  .pink {
+    background-color: magenta;
+  }
+
+  .lightblue {
+    background-color: aqua;
+  }
 }
 
 @mixin inner-box {
@@ -41,6 +49,17 @@ $border: #8d6e63;
   border: 3px solid $border;
   border-radius: 6px;
   background-image: inherit;
+}
+
+div.won {
+  font-size: 3em;
+  color: green;
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: lightyellow;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
 }
 
 div#guide {
