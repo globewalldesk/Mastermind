@@ -144,13 +144,15 @@ the user will have to be able to lose!
       active peg.
 - [x] Add a collapsible instruction bubble. Save collapsed state in session as
       necessary.
-- [ ] Different users use different sessions.
+- [x] Add two new colors for four-peg game.
+- [x] Different users use different sessions.
+- [ ] Allow user to choose 3 or 4 pegs and to restart game from middle of game.
+- [ ] Bug: Instruction should persist if not collapsed.
+- [ ] Bug: Instruction should not reappear if game is restarted.
 - [ ] Add integration tests!
-- [ ] Make design responsive (work on my phone)
-- [ ] Add two new colors for four-peg game.
+- [ ] Make design responsive (checkmark off, guide wraps and moved up).
 - [ ] Add empty holes to the results board.
 - [ ] Restrict number of turns; put turn numbers next to each.
-- [ ] Enable the user to choose between 3 and 4 rows, and to start a new game.
 - [ ] Move name, copyright, etc., to <footer> as practice for that.
 - [ ] Add column info for Bootstrap.
 - [ ] Check your resources that all needed HTML tags etc. are there; validate.

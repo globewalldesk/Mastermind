@@ -1,5 +1,5 @@
 div.won {
-  font-size: 3em;
+  font-size: 2em;
   color: green;
   border: 3px solid green;
   border-radius: 10px;
@@ -7,6 +7,8 @@ div.won {
   padding: 10px;
   max-width: 300px;
   text-align: center; }
+  div.won span.report {
+    font-size: 0.5em; }
 
 div#guide {
   position: relative;
@@ -30,6 +32,8 @@ div .pegrow {
   background-color: inherit; }
   div .pegrow .active-cell {
     cursor: pointer; }
+  div .pegrow .empty {
+    border: 0px !important; }
   div .pegrow .pegcell {
     height: 50px;
     width: 50px;
@@ -37,7 +41,14 @@ div .pegrow {
     margin: 1px;
     border: 3px solid #8d6e63;
     border-radius: 6px;
-    background-image: inherit; }
+    background-image: inherit;
+    text-align: center; }
+    div .pegrow .pegcell .number {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      color: #444; }
     div .pegrow .pegcell .peg {
       height: 30px;
       width: 30px;

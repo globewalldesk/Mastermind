@@ -1,7 +1,7 @@
 <%= erb :header %>
       <% if (@gamehash.guesses[0] && (@gamehash.code == @gamehash.guesses[0][:guess])) %>
         <div class="won">
-          <p>You won!</p>
+          <p>You won in <%=  @gamehash.guesses.length %> tries.</p>
           <% @won = true %>
           <form method="post" action="/new">
             <button type="submit" class="btn btn-success">New Game?</button>
@@ -17,11 +17,9 @@
       <% end %>
       <%= erb :guide %><br>
       <div class="board">
-        <div class="row pegrow guessrow">
-          <% unless @won %>
-            <%= erb :guessrow %>
-          <% end %>
-        </div>
+        <% unless @won %>
+          <%= erb :guessrow %>
+        <% end %>
         <%= erb :oldrows %>
       </div>
 <%= erb :footer %>

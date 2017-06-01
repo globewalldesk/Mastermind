@@ -52,7 +52,7 @@ $border: #8d6e63;
 }
 
 div.won {
-  font-size: 3em;
+  font-size: 2em;
   color: green;
   border: 3px solid green;
   border-radius: 10px;
@@ -60,6 +60,10 @@ div.won {
   padding: 10px;
   max-width: 300px;
   text-align: center;
+
+  span.report {
+    font-size: 0.5em;
+  }
 }
 
 div#guide {
@@ -92,8 +96,20 @@ div {
       cursor: pointer;
     }
 
+    .empty {
+      border: 0px !important;
+    }
+
     .pegcell {
       @include inner-box;
+      text-align: center;
+
+
+      .number {
+        @include center-div;
+        font-size: 2em;
+        color: #444;
+      }
 
       .peg {
         height: 30px;

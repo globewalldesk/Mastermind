@@ -1,6 +1,9 @@
 <% unless @gamehash.guesses.empty? # Don't render rows, yet, if no guesses yet. %>
-  <% @gamehash.guesses.each do |row| # Row contains ALL info on row. %>
+  <% @gamehash.guesses.each_with_index do |row, r| # Row contains ALL info on row. %>
     <div class="row pegrow">
+      <div class="pegcell">
+        <div class="number"><%= @gamehash.guesses.length - r %></div>
+      </div>
       <% row[:guess].each_with_index do |guess, i| # The :guess key => array of guesses.  %>
         <div class="pegcell">
           <div class="peg center-block <%= guess %>"></div>
