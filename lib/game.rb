@@ -5,7 +5,7 @@ class Game
   attr_accessor :codelength, :colors, :code, :guesses, :instructions
 
   def initialize
-    @codelength = 3 # placeholder; later versions will be able to set this
+    @codelength = 4 # placeholder; later versions will be able to set this
     @colors = COLORS[0,codelength * 2]
     @code = set_code(@codelength)
     @guesses = []

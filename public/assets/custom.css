@@ -30,6 +30,8 @@ div#guide {
 div .pegrow {
   margin: 2px;
   background-color: inherit; }
+  div .pegrow .guessform {
+    overflow: hidden; }
   div .pegrow .active-cell {
     cursor: pointer; }
   div .pegrow .empty {

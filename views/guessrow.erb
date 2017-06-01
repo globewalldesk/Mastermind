@@ -1,6 +1,6 @@
 <div class="row pegrow">
   <div class="pegcell empty"></div>
-  <form method="post" action="/guess">
+  <form class="guessform" method="post" action="/guess">
     <% for i in 0..(@gamehash.codelength - 1) %>
       <div class="pegcell active-cell" onclick="nextColor(<%= i %>)"
         onmouseover="showGuide()" onmouseout="hideGuide()">

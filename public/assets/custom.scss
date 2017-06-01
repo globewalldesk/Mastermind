@@ -92,6 +92,10 @@ div {
     margin: 2px;
     background-color: inherit;
 
+    .guessform {
+      overflow: hidden;
+    }
+
     .active-cell {
       cursor: pointer;
     }
@@ -103,7 +107,6 @@ div {
     .pegcell {
       @include inner-box;
       text-align: center;
-
 
       .number {
         @include center-div;
