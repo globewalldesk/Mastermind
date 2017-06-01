@@ -1,4 +1,4 @@
-div.won {
+div.gameover {
   font-size: 2em;
   color: green;
   border: 3px solid green;
@@ -7,8 +7,12 @@ div.won {
   padding: 10px;
   max-width: 300px;
   text-align: center; }
-  div.won span.report {
+  div.gameover span.report {
     font-size: 0.5em; }
+
+div.lost {
+  color: red;
+  border-color: red; }
 
 div#guide {
   position: relative;
