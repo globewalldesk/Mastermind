@@ -417,6 +417,8 @@
     "modals.less",
     "carousel.less"
   ],
-  "js": [],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=a2ea3379cd4de116129d2e3e8a729a33"
+  "js": [
+    "tooltip.js"
+  ],
+  "customizerUrl": "http://getbootstrap.com/customize/?id=0706a1c878d702ca85394d025f31b2fc"
 }

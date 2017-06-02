@@ -64,7 +64,6 @@
 
   function closeInstructions() {
     document.getElementById("instructions").style.display = "none";
-    <%= @gamehash.instructions = false %>;
+    document.getElementById("close_instructions").submit();
   }
-
 </script>

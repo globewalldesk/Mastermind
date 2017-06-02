@@ -2,15 +2,14 @@ class Game
 
   COLORS = %w( red orange yellow green blue purple pink lightblue )
 
-  attr_accessor :codelength, :limit, :colors, :code, :guesses, :instructions
+  attr_accessor :codelength, :limit, :colors, :code, :guesses
 
-  def initialize
-    @codelength = 3 # placeholder; later versions will be able to set this
-    @limit = @codelength == 3 ? 8 : 12
+  def initialize(options = {})
+    @codelength = options[:codelength] || 3 # placeholder; later versions will be able to set this
+    @limit = @codelength * 3
     @colors = COLORS[0,codelength * 2]
     @code = set_code(@codelength)
     @guesses = []
-    @instructions = true
   end
 
   def set_code(codelength)

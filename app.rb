@@ -12,6 +12,8 @@ enable :sessions
 get('/') do
   session[:gamehash] ||= Game.new  # if necessary, initialize empty game data hash
   @gamehash = session[:gamehash]
+  session[:instructions] ||= "open"
+  @instructions = session[:instructions]
   erb :main
 end
 
@@ -20,8 +22,13 @@ post('/guess') do
   redirect '/'
 end
 
-post('/new') do
-  session[:gamehash] = Game.new
+post('/restart') do
+  session[:gamehash] = Game.new(codelength: params[:restart].to_i)
   @won = false
+  redirect '/'
+end
+
+post('/close_instructions') do
+  session[:instructions] = "closed"
   redirect '/'
 end

@@ -1,3 +1,6 @@
+main {
+  max-width: 500px; }
+
 div.gameover {
   font-size: 2em;
   color: green;
@@ -6,7 +9,9 @@ div.gameover {
   background-color: lightyellow;
   padding: 10px;
   max-width: 300px;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px; }
   div.gameover span.report {
     font-size: 0.5em; }
 
@@ -14,23 +19,25 @@ div.lost {
   color: red;
   border-color: red; }
 
-div#guide {
-  position: relative;
-  display: none;
-  float: left;
-  background-image: url("images/background_wood.jpg");
-  top: -45px; }
-
 #instructions {
   max-width: 500px; }
+  #instructions a:hover {
+    cursor: pointer; }
 
-.board {
-  display: block;
+div .board {
+  float: left;
   border: 2px #8d6e63 solid;
   border-radius: 4px;
   background-image: url("images/background_wood.jpg");
-  position: absolute; }
-
+  position: relative; }
+div #guide {
+  position: absolute;
+  display: none;
+  float: left;
+  background-image: url("images/background_wood.jpg");
+  top: -67px;
+  left: -2px;
+  width: 131%; }
 div .pegrow {
   margin: 2px;
   background-color: inherit; }
@@ -40,6 +47,11 @@ div .pegrow {
     cursor: pointer; }
   div .pegrow .empty {
     border: 0px !important; }
+    div .pegrow .empty .arrow {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5em; }
   div .pegrow .pegcell {
     height: 50px;
     width: 50px;
@@ -169,5 +181,30 @@ div .pegrow {
       transform: translateY(-50%); }
       div .pegrow .resultbox .icon-button:hover {
         font-size: 2.1em; }
+div .guessrow {
+  float: left;
+  clear: both;
+  position: relative; }
+
+div .gamechooser {
+  float: left;
+  clear: both;
+  margin-top: 50px; }
+  div .gamechooser .choosetext {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center; }
+
+footer {
+  clear: both;
+  max-width: 500px;
+  padding-top: 4px;
+  border-top: #eee 1px solid; }
+
+ul {
+  list-style: none; }
+  ul li {
+    float: right;
+    margin-right: 10px; }
 
 /*# sourceMappingURL=custom.css.map */

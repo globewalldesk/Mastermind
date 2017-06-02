@@ -1,11 +1,16 @@
-<div class="row pegrow">
-  <div class="pegcell empty"></div>
+<div class="row pegrow guessrow">
+  <div class="pegcell empty">
+    <span class="glyphicon glyphicon-arrow-right arrow ttop"
+          data-toggle="tooltip" data-placement="top"
+          title="Click the holes to cycle through the colors!"></span>
+  </div>
   <form class="guessform" method="post" action="/guess">
     <% for i in 0..(@gamehash.codelength - 1) %>
       <div class="pegcell active-cell" onclick="nextColor(<%= i %>)"
         onmouseover="showGuide()" onmouseout="hideGuide()">
         <div id="peg<%= i %>" class="hole center-block">
           <input type="hidden" id="pegSubmit<%= i %>" name="peg<%= i %>" value="">
+          <!-- No idea why the Bootstrap styling isn't working! -->
         </div>
       </div>
     <% end %>

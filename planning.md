@@ -147,14 +147,15 @@ the user will have to be able to lose!
 - [x] Add two new colors for four-peg game.
 - [x] Different users use different sessions.
 - [x] Restrict number of turns; put turn numbers next to each.
-- [ ] Allow user to choose 2-4 pegs and to restart game from middle of game.
-- [ ] Bug: Instruction should persist if not collapsed.
-- [ ] Bug: Instruction should not reappear if game is restarted.
-- [ ] Add integration tests!
-- [ ] Make design responsive (checkmark off, guide wraps and moved up).
+- [x] Allow user to choose 2-4 pegs and to restart game from middle of game.
+- [x] Add right-pointing arrow in blank space.
+- [x] Bug: Instruction should persist if not collapsed.
+- [x] Bug: Instruction should not reappear if game is restarted.
 - [ ] Add empty holes to the results board.
 - [ ] Move name, copyright, etc., to <footer> as practice for that.
-- [ ] Add column info for Bootstrap.
 - [ ] Check your resources that all needed HTML tags etc. are there; validate.
-- [ ] Add everything you've learned to SuperMemo.
+- [ ] Get advice on solving the wrapping div problem.
+- [ ] Make design responsive (checkmark off, guide wraps and moved up).
+- [ ] Add integration tests!
 - [ ] Refactor everything.
+- [ ] Add everything you've learned to SuperMemo.
