@@ -151,8 +151,8 @@ the user will have to be able to lose!
 - [x] Add right-pointing arrow in blank space.
 - [x] Bug: Instruction should persist if not collapsed.
 - [x] Bug: Instruction should not reappear if game is restarted.
-- [ ] Add empty holes to the results board.
-- [ ] Move name, copyright, etc., to <footer> as practice for that.
+- [x] Move name, copyright, etc., to <footer> as practice for that.
+- [x] Add empty holes to the results board.
 - [ ] Check your resources that all needed HTML tags etc. are there; validate.
 - [ ] Get advice on solving the wrapping div problem.
 - [ ] Make design responsive (checkmark off, guide wraps and moved up).
