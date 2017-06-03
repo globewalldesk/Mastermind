@@ -32,12 +32,28 @@ $border: #8d6e63;
     background-color: purple;
   }
 
+  .brown {
+    background-color: saddlebrown;
+  }
+
   .pink {
     background-color: magenta;
   }
 
   .lightblue {
     background-color: aqua;
+  }
+
+  .silver {
+    background-color: silver;
+  }
+
+  .white {
+    background-color: white;
+  }
+
+  .black {
+    background-color: black;
   }
 }
 
@@ -80,9 +96,16 @@ div.lost {
 
 #instructions {
   max-width: 500px;
+  padding-bottom: 30px;
 
   a:hover {
     cursor: pointer;
+  }
+
+  .dismiss {
+    position: relative;
+    float: right;
+    vertical-align: bottom;
   }
 }
 
@@ -103,7 +126,7 @@ div {
     background-image: url("images/background_wood.jpg");
     top: -67px;
     left: -2px;
-    width: 131%; // No idea how to make the #guide div fit contents precisely!
+    width: 141%; // Kluge. This is reset in erby_javascript.erb!
   }
 
   .pegrow {
@@ -124,6 +147,7 @@ div {
       .arrow {
         @include center-div;
         font-size: 1.5em;
+        white-space: pre-wrap;
       }
     }
 
@@ -165,6 +189,7 @@ div {
       @include inner-box;
       margin-left: 10px;
       padding-top: 2px;
+      width: 50px;
 
       .resultrow {
         padding-left: 2px;

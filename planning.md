@@ -153,9 +153,7 @@ the user will have to be able to lose!
 - [x] Bug: Instruction should not reappear if game is restarted.
 - [x] Move name, copyright, etc., to <footer> as practice for that.
 - [x] Add empty holes to the results board.
-- [ ] Check your resources that all needed HTML tags etc. are there; validate.
-- [ ] Get advice on solving the wrapping div problem.
-- [ ] Make design responsive (checkmark off, guide wraps and moved up).
-- [ ] Add integration tests!
-- [ ] Refactor everything.
+- [x] Check your resources that all needed HTML tags etc. are there; validate.
+- [x] Get advice on solving the wrapping div problem. Went with an ugly kluge...
+- [ ] Get feedback.
 - [ ] Add everything you've learned to SuperMemo.

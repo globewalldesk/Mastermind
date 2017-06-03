@@ -20,9 +20,14 @@ div.lost {
   border-color: red; }
 
 #instructions {
-  max-width: 500px; }
+  max-width: 500px;
+  padding-bottom: 30px; }
   #instructions a:hover {
     cursor: pointer; }
+  #instructions .dismiss {
+    position: relative;
+    float: right;
+    vertical-align: bottom; }
 
 div .board {
   float: left;
@@ -37,7 +42,7 @@ div #guide {
   background-image: url("images/background_wood.jpg");
   top: -67px;
   left: -2px;
-  width: 131%; }
+  width: 141%; }
 div .pegrow {
   margin: 2px;
   background-color: inherit; }
@@ -51,7 +56,8 @@ div .pegrow {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      white-space: pre-wrap; }
   div .pegrow .pegcell {
     height: 50px;
     width: 50px;
@@ -89,10 +95,18 @@ div .pegrow {
       background-color: orange; }
     div .pegrow .pegcell .purple {
       background-color: purple; }
+    div .pegrow .pegcell .brown {
+      background-color: saddlebrown; }
     div .pegrow .pegcell .pink {
       background-color: magenta; }
     div .pegrow .pegcell .lightblue {
       background-color: aqua; }
+    div .pegrow .pegcell .silver {
+      background-color: silver; }
+    div .pegrow .pegcell .white {
+      background-color: white; }
+    div .pegrow .pegcell .black {
+      background-color: black; }
     div .pegrow .pegcell .hole {
       height: 15px;
       width: 15px;
@@ -111,7 +125,8 @@ div .pegrow {
     border-radius: 6px;
     background-image: inherit;
     margin-left: 10px;
-    padding-top: 2px; }
+    padding-top: 2px;
+    width: 50px; }
     div .pegrow .resultbox .resultrow {
       padding-left: 2px; }
       div .pegrow .resultbox .resultrow .resultcell {
@@ -160,10 +175,18 @@ div .pegrow {
           background-color: orange; }
         div .pegrow .resultbox .resultrow .resultcell .purple {
           background-color: purple; }
+        div .pegrow .resultbox .resultrow .resultcell .brown {
+          background-color: saddlebrown; }
         div .pegrow .resultbox .resultrow .resultcell .pink {
           background-color: magenta; }
         div .pegrow .resultbox .resultrow .resultcell .lightblue {
           background-color: aqua; }
+        div .pegrow .resultbox .resultrow .resultcell .silver {
+          background-color: silver; }
+        div .pegrow .resultbox .resultrow .resultcell .white {
+          background-color: white; }
+        div .pegrow .resultbox .resultrow .resultcell .black {
+          background-color: black; }
     div .pegrow .resultbox .icon-button {
       width: 100%;
       height: 100%;

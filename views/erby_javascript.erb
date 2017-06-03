@@ -1,4 +1,40 @@
 <script>
+  // This is a kluge...widens the .resultbox if codelength > 4.
+  function widenResultbox() {
+    var resultbox = document.getElementsByClassName("resultbox");
+    for (var box of resultbox) {
+      box.style.width = "72px";
+    }
+  }
+
+  // Wider board...wider result box.
+  if (<%= @gamehash.codelength %> > 4 ) {
+    widenResultbox();
+  }
+
+  // Set the width of the #guide...a super-kluge.
+  var guideWidth = 118;
+  switch (<%= @gamehash.codelength %>) {
+    case 2:
+      guideWidth = 98;
+      break;
+    case 3:
+      guideWidth = 118;
+      break;
+    case 4:
+      guideWidth = 131;
+      break;
+    case 5:
+      guideWidth = 133;
+      break;
+    case 6:
+      guideWidth = 141;
+      break;
+  }
+
+  document.getElementById("guide").style.width = guideWidth + "%";
+
+  // The JS logic for toggling colors.
   var colors = <%= @gamehash.colors %>;
   var pegCellColors = []; // Will be an array of the current peg cell colors.
   function nextColor(i) {

@@ -3,35 +3,7 @@
         <div class="page-header">
           <h1>Classic Mastermind</h1>
         </div>
-        <% if (@gamehash.guesses[0] && (@gamehash.code == @gamehash.guesses[0][:guess])) %>
-          <div class="gameover">
-            <p>You won in <%=  @gamehash.guesses.length %> tries.</p>
-            <% @gameover = true %>
-            <form method="post" action="/restart">
-              <input type="hidden" name="restart" value="<%= @gamehash.codelength %>">
-              <button type="submit" class="btn btn-success">New Game?</button>
-            </form>
-          </div>
-        <% elsif @gamehash.limit <= @gamehash.guesses.length %>
-        <div class="gameover">
-          <p>Sorry, you reached the limit of <%=  @gamehash.limit %> guesses!</p>
-          <% @gameover = true %>
-          <form method="post" action="/restart">
-            <input type="hidden" name="restart" value="<%= @gamehash.codelength %>">
-            <button type="submit" class="btn btn-success">New Game?</button>
-          </form>
-        </div>
-        <% elsif @instructions == "open" %>
-          <p class="well" id="instructions">
-             Guess the <%= @gamehash.codelength %>-long code! Click the holes to
-             change peg colors. Click the checkmark to submit a guess. Each small
-             black peg you get back means you guessed the right color in the right
-             position. Each white means you guessed the right color, but the
-             wrong position. <a onclick="closeInstructions();">Dismiss</a></p>
-           <form method="post" action="/close_instructions" id="close_instructions">
-             <input type="hidden">
-           </form>
-        <% end %>
+        <%= erb :gameover_and_instructions %>
         <div class="board">
           <%= erb :guide %>
           <% unless @gameover %>

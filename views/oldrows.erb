@@ -17,14 +17,31 @@
           <div class="resultcell">
             <div class="result-<%= row[:resultwords][1] %>"></div>
           </div>
+          <% if @gamehash.codelength > 4 %>
+          <div class="resultcell">
+            <div class="result-<%= row[:resultwords][2] %>"></div>
+          </div>
+          <% end %>
         </div>
         <div class="resultrow">
+          <% if @gamehash.codelength < 5 %>
           <div class="resultcell">
             <div class="result-<%= row[:resultwords][2] %>"></div>
           </div>
           <div class="resultcell">
             <div class="result-<%= row[:resultwords][3] %>"></div>
           </div>
+          <% else %>
+          <div class="resultcell">
+            <div class="result-<%= row[:resultwords][3] %>"></div>
+          </div>
+          <div class="resultcell">
+            <div class="result-<%= row[:resultwords][4] %>"></div>
+          </div>
+          <div class="resultcell">
+            <div class="result-<%= row[:resultwords][5] %>"></div>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>
