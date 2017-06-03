@@ -19,10 +19,10 @@
 <% elsif @instructions == "open" %>
   <p class="well" id="instructions">
      Guess the <%= @gamehash.codelength %>-peg code in <%= @gamehash.limit %>
-     guesses! Click the holes to change peg colors, then click the checkmark
-     to submit a guess. Each small black peg you receive back means you guessed
-     the right color in the right position. Each white means you guessed the
-     right color, but in the wrong position.
+     guesses! Click the holes to cycle through the peg colors, then click the
+     checkmark to submit a guess. Each small black peg you receive back means
+     you guessed the right color in the right position. Each white means you
+     guessed the right color, but in the wrong position.
      <span class="dismiss"><a onclick="closeInstructions();">Dismiss</a></span></p>
    <form method="post" action="/close_instructions" id="close_instructions">
      <input type="hidden">
