@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'bundler'
-require 'bundler/setup'
 require 'sinatra'
 
 require_relative './lib/game'

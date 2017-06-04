@@ -155,5 +155,6 @@ the user will have to be able to lose!
 - [x] Add empty holes to the results board.
 - [x] Check your resources that all needed HTML tags etc. are there; validate.
 - [x] Get advice on solving the wrapping div problem. Went with an ugly kluge...
-- [ ] Get feedback.
+- [ ] Get feedback from CRB and Front End Columbus (etc.?).
+- [ ] Execute on advice given by Columbus Ruby Brigade.
 - [ ] Add everything you've learned to SuperMemo.
