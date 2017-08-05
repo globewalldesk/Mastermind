@@ -98,8 +98,18 @@
     }
   }
 
-  function closeInstructions() {
-    document.getElementById("instructions").style.display = "none";
-    document.getElementById("close_instructions").submit();
+  var instructions = document.getElementById("instructions");
+  instructions.addEventListener("click", closeInstructions);
+
+  function closeInstructions(e) {
+    e.preventDefault();
+    var closeRequest = new HttpRequest("close_instructions", setInstructionsOff);
+    closeRequest.send();
   }
+
+  function setInstructionsOff() {
+    document.getElementById("instructions").style.display = "none";
+  }
+
+
 </script>

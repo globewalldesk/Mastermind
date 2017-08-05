@@ -2,7 +2,7 @@ require 'sinatra'
 
 require_relative './lib/game'
 require_relative './helpers/helper'
-include Helper # TRY REMOVING THIS AND SEE IF IT STILL WORKS
+include Helper
 
 enable :sessions
 
