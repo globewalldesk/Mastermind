@@ -121,12 +121,20 @@ div {
 
   #guide {
     position: absolute; // Should be positionable relative to main board.
-    display: none; // Isn't shown until showGuide() shows it.
+    display: none; // Isn't shown until click event listener toggles "guide-shown".
     float: left;
     background-image: url("images/background_wood.jpg");
     top: -67px;
     left: -2px;
     width: 141%; // Kluge. This is reset in erby_javascript.erb!
+
+    .pegcell {
+      cursor: pointer;
+    }
+  }
+
+  .guide-shown {
+    display: inline-block !important;
   }
 
   .pegrow {
@@ -169,10 +177,6 @@ div {
         @include center-div;
       }
 
-      .guide-highlight {
-        border: 3px white solid;
-      }
-
       @include peg-colors;
 
       .hole {
@@ -182,6 +186,10 @@ div {
         border-radius: 50%;
         background-color: black;
         @include center-div;
+      }
+
+      .highlight {
+        border-color: white;
       }
     }
 

@@ -43,6 +43,10 @@ div #guide {
   top: -67px;
   left: -2px;
   width: 141%; }
+  div #guide .pegcell {
+    cursor: pointer; }
+div .guide-shown {
+  display: inline-block !important; }
 div .pegrow {
   margin: 2px;
   background-color: inherit; }
@@ -81,8 +85,6 @@ div .pegrow {
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
-    div .pegrow .pegcell .guide-highlight {
-      border: 3px white solid; }
     div .pegrow .pegcell .red {
       background-color: red; }
     div .pegrow .pegcell .blue {
@@ -116,6 +118,8 @@ div .pegrow {
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
+    div .pegrow .pegcell .highlight {
+      border-color: white; }
   div .pegrow .resultbox {
     height: 50px;
     width: 50px;
